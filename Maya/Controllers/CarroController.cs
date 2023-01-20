@@ -2,11 +2,13 @@
 using Maya.Models;
 using Maya.Models.ViewModels;
 using Maya.Utilidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 namespace Maya.Controllers
 {
+    [Authorize]
     public class CarroController : Controller
     {
         private readonly ApplicationDbContext _db;
