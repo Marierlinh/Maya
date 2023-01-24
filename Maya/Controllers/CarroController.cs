@@ -3,6 +3,7 @@ using Maya.Models;
 using Maya.Models.ViewModels;
 using Maya.Utilidades;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using System.Text;
@@ -14,14 +15,16 @@ namespace Maya.Controllers
     {
         private readonly ApplicationDbContext _db;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IEmailSender _emailSender;
 
         [BindProperty] //para usar la propiedad en todo el controlador y no se pierdan sus valores
         public ProductoUsuarioVM productoUsuarioVM { get; set; }
 
-        public CarroController(ApplicationDbContext db, IWebHostEnvironment webHostEnvironment)
+        public CarroController(ApplicationDbContext db, IWebHostEnvironment webHostEnvironment, IEmailSender emailsender)
         {
             _db = db;
             _webHostEnvironment = webHostEnvironment;
+            _emailSender = emailsender;
         }
 
         public object Httpcontext { get; private set; }
@@ -85,7 +88,7 @@ namespace Maya.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ActionName("Resumen")]
-        public IActionResult ResumenPost(ProductoUsuarioVM productoUsuarioVM)
+        public async Task<IActionResult> ResumenPost(ProductoUsuarioVM productoUsuarioVM)
         {
 
             var rutaTemplate = _webHostEnvironment.WebRootPath + Path.DirectorySeparatorChar.ToString() + "templates"+ 
@@ -108,9 +111,13 @@ namespace Maya.Controllers
             
             string messageBody = string.Format(HtmlBody, productoUsuarioVM.UsuarioAplicacion.NombreCompleto,
                                                          productoUsuarioVM.UsuarioAplicacion.Email,
+                                                         productoUsuarioVM.UsuarioAplicacion.PhoneNumber,
                                                          productoListaSB.ToString());
 
-                return RedirectToAction(nameof(Confirmacion));
+            await _emailSender.SendEmailAsync(WC.EmailAdmin, subject, messageBody);
+
+
+            return RedirectToAction(nameof(Confirmacion));
         }
 
         public IActionResult Confirmacion()
