@@ -5,6 +5,7 @@ using Maya.Utilidades;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using System.Text;
 
 namespace Maya.Controllers
 {
@@ -12,13 +13,15 @@ namespace Maya.Controllers
     public class CarroController : Controller
     {
         private readonly ApplicationDbContext _db;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
         [BindProperty] //para usar la propiedad en todo el controlador y no se pierdan sus valores
         public ProductoUsuarioVM productoUsuarioVM { get; set; }
 
-        public CarroController(ApplicationDbContext db)
+        public CarroController(ApplicationDbContext db, IWebHostEnvironment webHostEnvironment)
         {
             _db = db;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         public object Httpcontext { get; private set; }
@@ -84,7 +87,30 @@ namespace Maya.Controllers
         [ActionName("Resumen")]
         public IActionResult ResumenPost(ProductoUsuarioVM productoUsuarioVM)
         {
-            return RedirectToAction(nameof(Confirmacion));
+
+            var rutaTemplate = _webHostEnvironment.WebRootPath + Path.DirectorySeparatorChar.ToString() + "templates"+ 
+                                                                 Path.DirectorySeparatorChar.ToString() + "PlantillaOrden.html ";
+
+            var subject = "Nueva Orden";
+            string HtmlBody = "";
+
+            using (StreamReader sr = System.IO.File.OpenText(rutaTemplate))
+            {
+                HtmlBody = sr.ReadToEnd();
+            }
+
+            StringBuilder productoListaSB = new StringBuilder();
+
+            foreach(var prod in productoUsuarioVM.ProductoLista)
+            {
+                productoListaSB.Append($" - Nombre: {prod.NombreProducto} <span style='font-size:14px;> (ID:{ prod.Id})</span><br />;");
+            }
+            
+            string messageBody = string.Format(HtmlBody, productoUsuarioVM.UsuarioAplicacion.NombreCompleto,
+                                                         productoUsuarioVM.UsuarioAplicacion.Email,
+                                                         productoListaSB.ToString());
+
+                return RedirectToAction(nameof(Confirmacion));
         }
 
         public IActionResult Confirmacion()
