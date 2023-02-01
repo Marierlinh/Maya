@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Maya.Migrations
+namespace Maya_AccesoDatos
 {
     public partial class scaffoldideentityRazorClassLib : Migration
     {

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Maya.Data
+namespace Maya_AccesoDatos.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

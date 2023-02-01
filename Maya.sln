@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maya_Utilidades", "Maya_Uti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maya_Modelos", "Maya_Modelos\Maya_Modelos.csproj", "{A7D43AF2-C60C-4C34-BC43-252DF9ECD714}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maya_AccesoDatos", "Maya_AccesoDatos\Maya_AccesoDatos.csproj", "{EC5BD65E-F5FE-44D5-9EB2-E47DD18A6341}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A7D43AF2-C60C-4C34-BC43-252DF9ECD714}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7D43AF2-C60C-4C34-BC43-252DF9ECD714}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7D43AF2-C60C-4C34-BC43-252DF9ECD714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5BD65E-F5FE-44D5-9EB2-E47DD18A6341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5BD65E-F5FE-44D5-9EB2-E47DD18A6341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5BD65E-F5FE-44D5-9EB2-E47DD18A6341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5BD65E-F5FE-44D5-9EB2-E47DD18A6341}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

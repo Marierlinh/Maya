@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Maya.Migrations
+namespace Maya_AccesoDatos
 {
     public partial class AgregarNombresUserTables : Migration
     {

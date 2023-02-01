@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Maya_AccesoDatos\Maya_AccesoDatos.csproj" />
     <ProjectReference Include="..\Maya_Modelos\Maya_Modelos.csproj" />
     <ProjectReference Include="..\Maya_Utilidades\Maya_Utilidades.csproj" />
   </ItemGroup>
