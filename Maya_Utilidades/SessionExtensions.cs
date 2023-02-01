@@ -1,6 +1,7 @@
-﻿using System.Text.Json;
+﻿using Microsoft.AspNetCore.Http;
+using System.Text.Json;
 
-namespace Maya.Utilidades
+namespace Maya_Utilidades
 {
     public  static class SessionExtensions
     {

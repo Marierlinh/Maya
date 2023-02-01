@@ -1,4 +1,4 @@
-﻿namespace Maya
+﻿namespace Maya_Utilidades
 {
     public static class WC
     {

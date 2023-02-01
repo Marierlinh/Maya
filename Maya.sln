@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maya", "Maya\Maya.csproj", "{C40D0C1F-8345-4C04-9058-EFD5D18C0557}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maya", "Maya\Maya.csproj", "{C40D0C1F-8345-4C04-9058-EFD5D18C0557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maya_Utilidades", "Maya_Utilidades\Maya_Utilidades.csproj", "{E2A9CAAA-50FC-4F1C-881F-502BFBAFC276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maya_Modelos", "Maya_Modelos\Maya_Modelos.csproj", "{A7D43AF2-C60C-4C34-BC43-252DF9ECD714}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{C40D0C1F-8345-4C04-9058-EFD5D18C0557}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C40D0C1F-8345-4C04-9058-EFD5D18C0557}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C40D0C1F-8345-4C04-9058-EFD5D18C0557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A9CAAA-50FC-4F1C-881F-502BFBAFC276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A9CAAA-50FC-4F1C-881F-502BFBAFC276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A9CAAA-50FC-4F1C-881F-502BFBAFC276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A9CAAA-50FC-4F1C-881F-502BFBAFC276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7D43AF2-C60C-4C34-BC43-252DF9ECD714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7D43AF2-C60C-4C34-BC43-252DF9ECD714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7D43AF2-C60C-4C34-BC43-252DF9ECD714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7D43AF2-C60C-4C34-BC43-252DF9ECD714}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

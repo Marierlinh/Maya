@@ -1,6 +1,6 @@
 ﻿using Maya.Data;
-using Maya.Models;
-using Maya.Models.ViewModels;
+using Maya_Modelos;
+using Maya_Modelos.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using System.Linq;
+using Maya_Utilidades;
 
 namespace Maya.Controllers
 {

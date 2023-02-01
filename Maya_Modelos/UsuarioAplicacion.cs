@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Maya.Models
+namespace Maya_Modelos
 {
     public class UsuarioAplicacion : IdentityUser
     {

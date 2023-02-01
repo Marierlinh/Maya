@@ -1,7 +1,8 @@
 ﻿using Maya.Data;
-using Maya.Models;
+using Maya_Modelos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Maya_Utilidades;
 
 namespace Maya.Controllers
 {

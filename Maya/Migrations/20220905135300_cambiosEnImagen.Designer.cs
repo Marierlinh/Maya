@@ -23,7 +23,7 @@ namespace Maya.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Maya.Models.Categoria", b =>
+            modelBuilder.Entity("Maya_Modelos.Categoria", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -43,7 +43,7 @@ namespace Maya.Migrations
                     b.ToTable("Categoria");
                 });
 
-            modelBuilder.Entity("Maya.Models.Producto", b =>
+            modelBuilder.Entity("Maya_Modelos.Producto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -84,7 +84,7 @@ namespace Maya.Migrations
                     b.ToTable("Producto");
                 });
 
-            modelBuilder.Entity("Maya.Models.TipoAplicacion", b =>
+            modelBuilder.Entity("Maya_Modelos.TipoAplicacion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -101,15 +101,15 @@ namespace Maya.Migrations
                     b.ToTable("TipoAplicacion");
                 });
 
-            modelBuilder.Entity("Maya.Models.Producto", b =>
+            modelBuilder.Entity("Maya_Modelos.Producto", b =>
                 {
-                    b.HasOne("Maya.Models.Categoria", "Categoria")
+                    b.HasOne("Maya_Modelos.Categoria", "Categoria")
                         .WithMany()
                         .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Maya.Models.TipoAplicacion", "TipoAplicacion")
+                    b.HasOne("Maya_Modelos.TipoAplicacion", "TipoAplicacion")
                         .WithMany()
                         .HasForeignKey("TipoAplicacionId")
                         .OnDelete(DeleteBehavior.Cascade)

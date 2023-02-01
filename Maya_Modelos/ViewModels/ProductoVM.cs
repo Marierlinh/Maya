@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Maya.Models.ViewModels
+namespace Maya_Modelos.ViewModels
 {
     public class ProductoVM
     {

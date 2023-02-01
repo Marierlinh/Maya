@@ -1,4 +1,4 @@
-﻿using Maya.Models;
+﻿using Maya_Modelos;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

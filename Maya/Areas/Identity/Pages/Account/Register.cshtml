@@ -1,7 +1,8 @@
 ﻿@page
 @model RegisterModel
+@using Maya_Utilidades
 
-@if(User.IsInRole(Maya.WC.AdminRole))
+@if(User.IsInRole(WC.AdminRole))
 {
     <h1>Registrar un usuario Administrador</h1>
 }
@@ -41,7 +42,7 @@ else
                 <label asp-for="Input.ConfirmPassword"></label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-            @if(User.IsInRole(Maya.WC.AdminRole))
+            @if(User.IsInRole(WC.AdminRole))
             {
                 <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-warning">Register Usuario Administrador</button>
             }

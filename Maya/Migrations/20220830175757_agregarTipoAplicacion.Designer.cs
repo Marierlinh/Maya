@@ -23,7 +23,7 @@ namespace Maya.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Maya.Models.Categoria", b =>
+            modelBuilder.Entity("Maya_Modelos.Categoria", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -43,7 +43,7 @@ namespace Maya.Migrations
                     b.ToTable("Categoria");
                 });
 
-            modelBuilder.Entity("Maya.Models.TipoAplicacion", b =>
+            modelBuilder.Entity("Maya_Modelos.TipoAplicacion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

@@ -1,4 +1,4 @@
-﻿namespace Maya.Models.ViewModels
+﻿namespace Maya_Modelos.ViewModels
 {
     public class DetalleVM
     {

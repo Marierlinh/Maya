@@ -1,7 +1,7 @@
 ﻿using Maya.Data;
-using Maya.Models;
-using Maya.Models.ViewModels;
-using Maya.Utilidades;
+using Maya_Modelos;
+using Maya_Modelos.ViewModels;
+using Maya_Utilidades;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;

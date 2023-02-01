@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Maya.Models
+namespace Maya_Modelos
 {
     public class Producto
     {

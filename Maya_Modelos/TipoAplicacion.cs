@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Maya.Models
+namespace Maya_Modelos
 {
     public class TipoAplicacion
     {

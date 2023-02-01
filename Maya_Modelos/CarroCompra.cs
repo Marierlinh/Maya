@@ -1,4 +1,4 @@
-﻿namespace Maya.Models
+﻿namespace Maya_Modelos
 {
     public class CarroCompra
     {
