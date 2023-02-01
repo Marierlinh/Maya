@@ -2,6 +2,7 @@
 using Maya.Models;
 using Maya.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
@@ -10,6 +11,8 @@ using System.Linq;
 
 namespace Maya.Controllers
 {
+    [Authorize(Roles = WC.AdminRole)]
+
     public class ProductoController : Controller
     {
         private readonly ApplicationDbContext _db;

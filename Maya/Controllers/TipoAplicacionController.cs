@@ -1,11 +1,15 @@
 ﻿using Maya.Data;
 using Maya.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Maya.Controllers
 {
+    [Authorize(Roles = WC.AdminRole)]
+
     public class TipoAplicacionController : Controller
     {
+       
         private readonly ApplicationDbContext _db;
 
         public TipoAplicacionController(ApplicationDbContext db)

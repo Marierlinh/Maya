@@ -1,11 +1,16 @@
 ﻿using Maya.Data;
 using Maya.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Maya.Controllers
 {
+    [Authorize(Roles = WC.AdminRole)]
+
     public class CategoriaController : Controller
     {
+        
         private readonly ApplicationDbContext _db;
 
         public CategoriaController(ApplicationDbContext db)
